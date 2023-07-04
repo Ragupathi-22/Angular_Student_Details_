@@ -1,0 +1,27 @@
+#div2{
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fae1ff;
+}
+#div1{
+  max-width: 600px;
+  margin: 0 auto;
+  padding:50px;
+  height: 550px;
+  box-shadow: rgba(200,100,111,.2)0px 7px 29px 0px;
+  background-color: #ffd6c8;
+
+}
+.form-group{
+  margin-bottom: 30px;
+}
+.er{
+  color: red;
+}
+#success{
+  color: green;
+}
+span{
+  margin: 20px;
+}

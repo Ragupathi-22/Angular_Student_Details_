@@ -1,0 +1,26 @@
+
+#divm {
+  height:100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: #e1c7ff;
+
+
+}
+
+#div1{
+  max-width: 600px;
+  margin: 0 auto;
+  padding:50px;
+  box-shadow: rgba(200,100,111,.2)0px 7px 29px 0px;
+  background-color: #cb94ff;
+
+
+}
+.form-group{
+  margin-bottom: 30px;
+}
+.er{
+  color: red;
+}
