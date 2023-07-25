@@ -41,8 +41,11 @@ export class StudentDetailComponent {
       console.error(error)});
   }
 
-  ngOnInit(){
+  ngAfterViewInit(){
    this.getData();
+  }
+  mgOnInit(){
+    this.getData();
   }
 
 
@@ -79,7 +82,6 @@ add(){
     this.getData();
    }
 
-
   onEdit(data:any){
 
     const values={
@@ -91,7 +93,7 @@ add(){
     }
 
   this.route.navigate(['/edit',values]);
-
+  this.getData();
   }
   onDelet(d:any){
       //delete details
