@@ -25,7 +25,9 @@ export class LoginComponent {
   response:any;
   error:any;
 
-  onlogin(data:any){
+  onlogin(data:any)
+  {
+
       this.formvalue=data.control.value;
       const formdata=new FormData();
       formdata.append('email',this.formvalue.email);

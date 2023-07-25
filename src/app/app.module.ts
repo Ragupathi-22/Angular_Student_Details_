@@ -13,6 +13,7 @@ import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
 import { DataTablesModule } from "angular-datatables";
 import { NgxPaginationModule} from "ngx-pagination";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NgxPaginationModule} from "ngx-pagination";
     ReactiveFormsModule,
     DataTablesModule,
     NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

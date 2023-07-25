@@ -40,10 +40,6 @@ gender:new FormControl(null,Validators.required),
       console.log(this.response.success);
     });
 
-    //getdetail
-    this.apiservice.getStudents().subscribe((res)=>{
-    },error => {
-      console.error(error)});
 
     this.router.navigateByUrl('detail');
 

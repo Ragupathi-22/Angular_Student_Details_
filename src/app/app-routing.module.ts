@@ -14,11 +14,11 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path: 'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
-  {path:'detail',component:StudentDetailComponent,canActivate:[RouterguardService]},
+  {path:'detail',component:StudentDetailComponent},
   {path:'add',component:AddComponent,canActivate:[RouterguardService]},
   {path:'edit',component:UpdateComponent,canActivate:[RouterguardService]},
 ];
-
+// canActivate:[RouterguardService]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

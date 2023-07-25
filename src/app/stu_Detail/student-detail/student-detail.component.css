@@ -8,3 +8,30 @@
 #nav{
   background-color: #ffd695;
 }
+#div3{
+  margin-top: 10px;
+}
+i{
+  font-size: larger;
+}
+i:hover{
+  font-weight: bolder;
+  color: blue;
+  cursor: pointer;
+}
+#div4{
+  margin-left: 25px;
+}
+b{
+  margin-left: 550px;
+  color: brown;
+}
+#div5{
+  position: absolute;
+  display: inline-block;
+  margin-left: 492px;
+  margin-top: -37px;
+}
+#tdbtn{
+  text-align: center;
+}

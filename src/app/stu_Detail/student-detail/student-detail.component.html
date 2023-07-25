@@ -5,33 +5,60 @@
     <div class="d-flex"><button class="btn btn bg-success" (click)="add()">Add-Student</button></div>
   </div>
 </nav>
-
 <div id="div2">
-<table class="table mt-3 m-lg-4"  >
+  <div id="div3" >
+    <div class="col-1" id="div4">
+      <select [(ngModel)]="itemsPerPage" class="form-control">
+        <option value="8">Select ^</option>
+        <option value="10" >10 ^</option>
+        <option value="20" >20 ^</option>
+        <option value="30" >30 ^</option>
+      </select>
+    </div>
+
+    <div id="div5">
+      <button class="btn btn-primary" (click)="exportToExcel()">Export to Excel</button>
+    </div>
+
+    <div class="mt-3 mx-4 col-6">
+      <input type="text" class="form-control" placeholder="Search by name or email or Phone Number" [(ngModel)]="searchTerm"
+        (input)="onSearch()" >
+    </div>
+  </div>
+<table class="table table-bordered table-hover mt-3 m-lg-4"  >
   <thead>
   <tr>
-    <th scope="col">ID</th>
-    <th scope="col">Name</th>
-    <th scope="col">Gender</th>
-    <th scope="col">Email</th>
-    <th scope="col">Phone</th>
-    <th scope="col">Action</th>
+    <th scope="col">ID </th>
+    <th scope="col">Name <i (click)="onSort('name')">^</i></th>
+    <th scope="col">Gender <i (click)="onSort('gender')">^</i></th>
+    <th scope="col">Email <i (click)="onSort('mail')">^</i></th>
+    <th scope="col">Phone <i (click)="onSort('phone')">^</i></th>
+    <th scope="col" style="text-align: center;">Action</th>
   </tr>
   </thead>
-  <tbody>
-  <tr  *ngFor="let d of allData |paginate :{itemsPerPage:10,currentPage:p,totalItems:total}; index as i">
+  <tbody *ngFor="let d of allData | paginate : { itemsPerPage: itemsPerPage, currentPage: p, totalItems: total };  index as i">
+  <tr>
     <td>{{i+1}}</td>
     <td>{{d.name}}</td>
     <td>{{d.gender}}</td>
     <td>{{d.email}}</td>
     <td>{{d.phone}}</td>
-    <td><button class="btn btn-info" (click)="onEdit(d)">Edit</button>
+    <td id="tdbtn"><button class="btn btn-info" (click)="onEdit(d)">Edit</button>
         <button class="btn btn-danger mx-3" (click)="onDelet(d.id)">Delete</button>
     </td>
   </tr>
+  <tr>
+  </tr>
   </tbody>
 </table>
-  <div><pagination-controls (pageChange)="p=$event"></pagination-controls> </div>
+  <div>
+
+    <b *ngIf="length==0">No Record Found.....</b>
+
+    <!--    <pagination-controls [(ngModel)]="p" (pageChange)="onPageChange($event)">-->
+<!--    </pagination-controls>-->
+    <div><pagination-controls (pageChange)="p=$event"></pagination-controls> </div>
+  </div>
 </div>
 
 

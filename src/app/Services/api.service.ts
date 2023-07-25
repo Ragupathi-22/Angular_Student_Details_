@@ -14,12 +14,11 @@ export class ApiService {
 
 
   //get details
-  getStudents(){
-    return this.http.get<students[]>(this.baseUrl+'getDetail.php').pipe((res)=>{
+  getStudents(data:any){
+    return this.http.post<students[]>(this.baseUrl+'getDetail.php',data).pipe((res)=>{
       return res;
     });
   }
-
 
   //adding the data
   addData(data:any){
